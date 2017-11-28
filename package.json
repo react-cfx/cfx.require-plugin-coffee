@@ -1,6 +1,6 @@
 {
   "name": "cfx.require-plugin-coffee",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/bundle.js",
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -14,7 +14,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
     "@babel/runtime": "^7.0.0-beta.32",
-    "cfx.require": "^0.0.0",
+    "cfx.require": "^0.0.1",
     "cfx.rollup-plugin-coffee2": "^0.1.0",
     "coffeescript": "^2.0.3",
     "require-from-string": "^2.0.1",

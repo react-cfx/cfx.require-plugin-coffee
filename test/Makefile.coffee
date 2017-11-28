@@ -9,7 +9,6 @@ import {
 import CoffeeScript from 'coffeescript'
 
 import getRequire from 'cfx.require'
-# import coffee from '../src'
 import coffee from '../dist/bundle'
 
 target.all = ->
@@ -20,12 +19,12 @@ target.ext = ->
 
 target.compile = ->
 
-  coffee = fs.readFileSync (
+  code = fs.readFileSync (
     path.join __dirname, '../src/compiler.coffee'
   )
   , 'utf-8'
 
-  es6 = coffee2ToEs6 coffee
+  es6 = coffee2ToEs6 code
   console.log es6
 
   es5 = es6ToEs5 es6

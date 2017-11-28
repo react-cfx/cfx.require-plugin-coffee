@@ -1,3 +1,8 @@
 #!/usr/bin/env coffee
-require 'coffee-require/register'
+{ register } = (
+  require 'cfx.require'
+) [
+  do require '../dist/bundle'
+]
+register()
 require './Makefile'
