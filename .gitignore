@@ -20,3 +20,6 @@ package-lock.json
 
 yarn.lock
 yarn*.log
+
+/index.js
+/register.js
