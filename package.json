@@ -1,9 +1,9 @@
 {
   "name": "cfx.require-plugin-coffee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/bundle.js",
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./dist; rm -rf ./index.js; rm -rf ./register.js",
     "build": "rollup -c",
     "rebuild": "npm run clean; npm run build",
     "dev": "rollup -c -w",

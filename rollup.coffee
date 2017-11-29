@@ -12,10 +12,23 @@ plugins = [
   cleanup()
 ]
 
-export default {
-  input: './index.js'
+index = {
+  input: './rollup/index.js'
   output:
-    file: './dist/bundle.js'
+    file: './index.js'
     format: 'cjs'
   plugins
 }
+  
+register = {
+  input: './rollup/register.js'
+  output:
+    file: './register.js'
+    format: 'cjs'
+  plugins
+}
+
+export default [
+  index
+  register
+]

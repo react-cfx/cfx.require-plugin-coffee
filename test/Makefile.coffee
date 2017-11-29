@@ -9,7 +9,7 @@ import {
 import CoffeeScript from 'coffeescript'
 
 import getRequire from 'cfx.require'
-import coffee from '../dist/bundle'
+import coffee from '../index'
 
 target.all = ->
   dd 'Hello Wolrd!!!'
