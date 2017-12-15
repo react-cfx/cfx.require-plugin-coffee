@@ -7,6 +7,5 @@ docker:
 		--rm \
 		-ti \
 		-v $$(pwd):/root/${pjName} \
-		-v $$(pwd)/../cfx.require:/root/cfx.require \
 		mooxe/node \
 		/bin/bash
