@@ -11,4 +11,5 @@
 
 register = require '../register'
 register require 'cfx.require'
+
 require './Makefile'

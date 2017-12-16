@@ -38,4 +38,4 @@ target.require = ->
     coffee()
   ]
 
-  do CS.gdf CS.require './coffee'
+  do CS.gdf await CS.require './coffee'

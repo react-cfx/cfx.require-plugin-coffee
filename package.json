@@ -1,6 +1,6 @@
 {
   "name": "cfx.require-plugin-coffee",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./dist; rm -rf ./index.js; rm -rf ./register.js",
@@ -10,10 +10,10 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "cfx.babel": "^0.0.0",
-    "cfx.require": "^0.0.1",
-    "cfx.rollup-plugin-coffee2": "^0.1.0",
-    "coffeescript": "^2.0.3",
+    "cfx.babel": "^0.0.8",
+    "cfx.require": "^0.0.4",
+    "cfx.rollup-plugin-coffee2": "^0.1.4",
+    "coffeescript": "^2.1.0",
     "require-from-string": "^2.0.1",
     "rollup": "^0.52.0",
     "rollup-plugin-cleanup": "^2.0.0"
