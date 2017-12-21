@@ -10,6 +10,8 @@
 # register()
 
 register = require '../register'
-register require 'cfx.require'
+_require = require 'cfx.require'
+{ gdf } = _require
+register gdf _require
 
 require './Makefile'

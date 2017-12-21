@@ -11,7 +11,7 @@ import {
   es6ToEs5
 } from '../src/compiler'
 
-import getRequire from 'cfx.require'
+import getRequire, { gdf } from 'cfx.require'
 
 import coffee from '../index'
 import _coffee from './coffee'
@@ -26,7 +26,7 @@ target.compile = ->
 
   code = fs.readFileSync (
     # path.join __dirname, '../src/compiler.coffee'
-    path.join __dirname, './coffee'
+    path.join __dirname, './coffee/index.coffee'
   )
   , 'utf-8'
 
@@ -48,7 +48,7 @@ target.require = ->
     coffee()
   ]
 
-  do CS.gdf await CS.require './coffee'
+  do gdf await CS.require './coffee'
 
 target.coffee = ->
 
