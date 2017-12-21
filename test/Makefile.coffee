@@ -1,15 +1,20 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
+
+import CoffeeScript from 'coffeescript'
+
 import fs from 'fs'
 import path from 'path'
+
 import {
   coffee2ToEs6
   es6ToEs5
 } from '../src/compiler'
-import CoffeeScript from 'coffeescript'
 
 import getRequire from 'cfx.require'
+
 import coffee from '../index'
+import _coffee from './coffee'
 
 target.all = ->
   dd 'Hello Wolrd!!!'
@@ -20,7 +25,8 @@ target.ext = ->
 target.compile = ->
 
   code = fs.readFileSync (
-    path.join __dirname, '../src/compiler.coffee'
+    # path.join __dirname, '../src/compiler.coffee'
+    path.join __dirname, './coffee'
   )
   , 'utf-8'
 
@@ -32,10 +38,23 @@ target.compile = ->
 
 target.require = ->
 
-  # dd coffee().compiler "import dd from 'ddeyes'"
+  # console.log coffee().compiler "import dd from 'ddeyes'"
+  # console.log coffee().compiler """
+  #   hello = ->
+  #     await world()
+  # """
 
   CS = getRequire [
     coffee()
   ]
 
   do CS.gdf await CS.require './coffee'
+
+target.coffee = ->
+
+  # CS = getRequire [
+  #   coffee()
+  # ]
+
+  # do CS.gdf _coffee
+  _coffee()

@@ -8,7 +8,16 @@ coffee2ToEs6 = (code) ->
 es6ToEs5 = (code) ->
   compile code
   ,
-    presets: 2015
+    presets:
+    # [
+    #   2015
+    #   2016
+    #   2017
+    # ]
+      env:
+        targets:
+          node: 'current'
+    runtime: true
 
 export {
   coffee2ToEs6
